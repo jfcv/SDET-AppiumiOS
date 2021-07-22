@@ -8,7 +8,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BaseiOSTest {
-    public static void main(String[] args) throws MalformedURLException {
+    public static IOSDriver Capabilities() throws MalformedURLException {
 
         DesiredCapabilities caps = new DesiredCapabilities();
 
@@ -20,5 +20,6 @@ public class BaseiOSTest {
         caps.setCapability(MobileCapabilityType.APP, "/Users/juanfernando.cuadros/code/AppiumiOS/app/UIKitCatalog.app");
 
         IOSDriver driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
+        return driver;
     }
 }
