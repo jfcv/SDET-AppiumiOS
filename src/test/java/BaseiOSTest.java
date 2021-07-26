@@ -17,7 +17,7 @@ public class BaseiOSTest {
         caps.setCapability(MobileCapabilityType.AUTOMATION_NAME, AutomationName.IOS_XCUI_TEST); //XCUI TEST framework used by appium for automating apps on iOS
         caps.setCapability(IOSMobileCapabilityType.LAUNCH_TIMEOUT, 50000); //waits for the app before starting the test
         caps.setCapability("commandTimeouts", "12000"); //waits at each command execution
-        caps.setCapability(MobileCapabilityType.APP, "/Users/juanfernando.cuadros/code/AppiumiOS/app/UIKitCatalog.app");
+        caps.setCapability(MobileCapabilityType.APP, "/Users/juanfernando.cuadros/code/AppiumiOS/app/longtap.app");
 
         IOSDriver driver = new IOSDriver<>(new URL("http://localhost:4723/wd/hub"), caps);
         return driver;
