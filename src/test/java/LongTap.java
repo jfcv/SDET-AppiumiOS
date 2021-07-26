@@ -4,6 +4,7 @@ import io.appium.java_client.ios.IOSTouchAction;
 
 import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 import static io.appium.java_client.touch.offset.ElementOption.element;
+import static io.appium.java_client.touch.TapOptions.tapOptions;
 
 import java.net.MalformedURLException;
 import java.time.Duration;
@@ -19,5 +20,8 @@ public class LongTap extends BaseiOSTest {
                 .withDuration(Duration.ofSeconds(2)))
                 .release()
                 .perform();
+
+        MobileElement nameSlider = (MobileElement) driver.findElementByIosClassChain("**/XCUIElementTypeSwitch[`value == \"1\"`][1]");
+        action.tap(tapOptions().withElement(element(nameSlider))).perform();
     }
 }
